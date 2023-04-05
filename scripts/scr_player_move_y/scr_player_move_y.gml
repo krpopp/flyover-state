@@ -11,7 +11,7 @@ function scr_player_move_y(y_change){
 			new_cell = ds_grid_get(obj_manager.grid_visible, grid_visible_x, grid_visible_y + y_change);
 			if(new_cell.my_solid != true){
 				obj_manager.grid_y_start += y_change;
-				scr_adj_vis_grid();
+				//scr_adj_vis_grid();
 				old_cell = ds_grid_get(obj_manager.grid_visible, grid_visible_x, grid_visible_y + -y_change);
 			} else{
 				scr_player_collide(new_cell);
@@ -35,9 +35,15 @@ function scr_player_move_y(y_change){
 			}
 			}
 		}
+		scr_adj_vis_grid();
 		if(old_cell != noone){
-			old_cell.my_visibility = true;
-			new_cell.my_visibility = false;
+			old_cell.tar_alpha = 1;
+			old_cell.alpha_lerping = true;
+			old_cell.alpha_lerp = 0.01;
+			new_cell.tar_alpha = 0;
+			new_cell.alpha_lerping = true;
+			new_cell.alpha_lerp = 0.3
+			//new_cell.my_visibility = false;
 		}
 		scr_fov(grid_visible_x, grid_visible_y);
 		if(!obj_manager.zooming_in && obj_dialog_manager.dialog_active){

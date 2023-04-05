@@ -29,3 +29,8 @@ tar_x = 0;
 tar_y = 0;
 
 sub_obj = noone;
+
+alpha_lerp = 0.1;
+alpha_lerping = false;
+alpha = 1;
+tar_alpha = 1;

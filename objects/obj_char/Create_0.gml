@@ -4,9 +4,16 @@
 
 event_inherited();
 
+my_portrait = spr_new_test;
+
 my_solid = true;
 
 my_color = #BD8CBF;
+
+t_l = #220d36;
+t_r = #220d36;
+b_r = #220d36;
+b_l = #220d36;
 
 my_dialog_all = "";
 my_dialog_track = 0;

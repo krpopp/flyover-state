@@ -49,9 +49,18 @@ function scr_adj_vis_grid(){
 			next_cell.grid_visible_y = v_y;
 			
 			if(next_cell.my_bubble != noone){
-				next_cell.my_bubble.my_visibility = true;
-				next_cell.my_bubble.x = next_cell.x;
-				next_cell.my_bubble.y = next_cell.y - 20;
+				if(!next_cell.my_bubble.has_seen){
+					next_cell.my_bubble.my_visibility = true;
+					next_cell.my_bubble.x = next_cell.tar_x;
+					next_cell.my_bubble.y = next_cell.tar_y - 20;
+					next_cell.my_bubble.has_seen = true;
+				}else{
+					next_cell.my_bubble.my_visibility = true;
+					next_cell.my_bubble.tar_x = next_cell.tar_x;
+					next_cell.my_bubble.tar_y = next_cell.tar_y - 20;
+					next_cell.my_bubble.lerp_amt = 0.08;
+					//next_cell.my_bubble.alarm[0] = room_speed * 0.05;
+				}
 			}
 
 			ds_grid_add(obj_manager.grid_visible, next_cell.grid_visible_x, next_cell.grid_visible_y, next_cell);

@@ -9,11 +9,3 @@ if(lerp_amt > 0){
 		//y = tar_y;
 	}
 }
-
-if(alpha_lerping){
-	alpha = lerp(alpha, tar_alpha, alpha_lerp);
-	if(alpha == tar_alpha){
-		alpha_lerping = false;
-	}
-	image_alpha = alpha;
-}

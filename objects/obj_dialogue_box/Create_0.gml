@@ -1,9 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-my_portrait = spr_new_test;
+my_portrait = noone;
 
 portrait_alpha = 0;
+
+t_l = noone;
+t_r = noone;
+b_r = noone;
+b_l = noone;
 
 blinking = false;
 blink_time = 0;

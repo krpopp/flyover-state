@@ -23,10 +23,10 @@ cell_offset = font_get_info(fnt_game).size + 3;
 //grid_horizontal_size = round(room_width/cell_offset)/1.5;
 grid_horizontal_size = round(((room_width - (grid_x_offset + cell_offset))/cell_offset));
 //show_debug_message(grid_horizontal_size);
-grid_vertical_size = round(((room_height  - (grid_y_offset + cell_offset))/cell_offset));
+//grid_vertical_size = round(((room_height  - (grid_y_offset + cell_offset))/cell_offset));
 
 //grid_horizontal_size = 25;
-//grid_vertical_size = 25;
+grid_vertical_size = 30;
 
 level_whole = load_csv("graveyard.csv");
 level_width = ds_grid_width(level_whole);
@@ -79,3 +79,6 @@ scr_adj_vis_grid();
 grid_made = true;
 scr_fov(player_start_x, player_start_y);
 //camera_set_view_size(view_camera[0], 683, 384);
+
+dialoge_box = instance_create_layer(room_width/1.6, room_height/1.3, "Instances", obj_dialogue_box);
+instance_deactivate_object(dialoge_box);

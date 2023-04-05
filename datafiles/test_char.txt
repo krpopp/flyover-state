@@ -1,0 +1,31 @@
+{
+    "stage": [
+        {
+            "line": "can i see this?",
+            "choices":
+                [
+                    "yes",
+                    "no"
+                ],
+            "next_stage": 
+                [
+                    1,
+                    2
+                ]
+        },
+        {
+            "line": "fantastic!",
+            "next_stage": 
+                [
+                    3
+                ]
+        },
+        {
+            "line": "that's weird",
+            "next_stage": 
+                [
+                    3
+                ]
+        }
+    ]
+}

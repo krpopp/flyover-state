@@ -9,7 +9,7 @@ my_color = make_colour_rgb(243, 183, 0);
 
 //my_x_min = (x - sprite_width/2) - 0.2;
 //my_x_max = (x - sprite_width/2) + 0.2;
-my_lerp_speed = 0.1;
+my_lerp_speed = random_range(0.01, 0.03);
 casts_shadows = true;
 //my_x_1_lerp = x - sprite_width/2;
 //my_x_2_lerp = x + sprite_width/2;

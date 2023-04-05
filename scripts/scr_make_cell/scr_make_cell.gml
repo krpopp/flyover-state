@@ -8,19 +8,16 @@ function scr_make_cell(grid_x, grid_y){
 	var new_cell = scr_cell_type(string(obj_manager.level_whole[# grid_x, grid_y]));
 	
 	new_cell.my_letter = string(obj_manager.level_whole[# grid_x, grid_y]);
-	new_cell.my_text = scribble(new_cell.my_letter);
 	new_cell.my_visibility = false;
 	
-	//new_cell.my_text.blend(new_cell.my_color, 1);
-	new_cell.my_text.starting_format("fnt_game", new_cell.my_color);
-	new_cell.my_text.origin(new_cell.my_text.get_width()/2, new_cell.my_text.get_height()/2);
 	
 	new_cell.grid_whole_x = grid_x;
 	new_cell.grid_whole_y = grid_y;
 	
+	
 	if(new_cell.object_index == obj_tall_grass){
-		new_cell.my_x_1_lerp = (new_cell.x - new_cell.sprite_width);
-		new_cell.my_x_2_lerp = (new_cell.x + new_cell.sprite_width);
+		new_cell.my_x_1_lerp = (new_cell.x - new_cell.sprite_width) + random(10);;
+		new_cell.my_x_2_lerp = (new_cell.x + new_cell.sprite_width) + random(10);;
 	}
 	
 	if(new_cell.object_index == obj_wall){
@@ -59,6 +56,19 @@ function scr_make_cell(grid_x, grid_y){
 			new_cell.image_index = 2;
 			break;
 		}
+	}
+	
+	if(new_cell.my_letter == "æ"){
+		new_cell.sub_obj = instance_create_layer(new_cell.x, new_cell.y, "Instances", obj_moving_car);
+		new_cell.sub_obj.move_dir = -1;
+		new_cell.sub_obj.grid_x = grid_x;
+		new_cell.sub_obj.grid_y = grid_y;
+		new_cell.sub_obj.parent_x = new_cell.x;
+		new_cell.sub_obj.parent_y = new_cell.y;
+	}
+	
+	if(new_cell.my_has_dialog){
+		new_cell.my_bubble = scr_speak_bubble(new_cell.x, new_cell.y, "Hey!");
 	}
 	
 	new_cell.grid_visible_x = 0;

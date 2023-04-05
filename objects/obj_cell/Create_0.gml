@@ -16,3 +16,16 @@ my_color = make_colour_rgb(255, 255, 255);
 my_solid = false;
 
 casts_shadows = false;
+
+my_has_dialog = false;
+my_bubble = noone;
+
+my_dialog_box = noone;
+
+my_player_see = false;
+
+lerp_amt = 0;
+tar_x = 0;
+tar_y = 0;
+
+sub_obj = noone;

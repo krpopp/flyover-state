@@ -16,12 +16,15 @@ if(my_visibility){
 	my_x_1_lerp += my_lerp_speed;
 	my_x_2_lerp += my_lerp_speed;
 	//show_debug_message(my_x_1_lerp);
+	
 	draw_sprite_pos(sprite_index, image_index, 
 		my_x_1_lerp, y - sprite_height/2, 
 		my_x_2_lerp, y - sprite_height/2, 
 		x + sprite_width/2, y + sprite_height/2, 
 		x - sprite_width/2, y + sprite_height/2, 
 		1);
+		
+
 	//draw_sprite(sprite_index, 0, x, y);
 	//draw_text_color(x, y, my_letter, my_color, my_color, my_color, my_color, 1);
 	//draw_text_scribble(x, y, my_letter);

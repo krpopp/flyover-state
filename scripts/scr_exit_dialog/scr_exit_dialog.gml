@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_exit_dialog(){
+	obj_manager.zooming_in = false;
 	obj_dialog_manager.dialog_character_active.my_dialog_box.fading_out = true;
 	obj_dialog_manager.dialog_active = false;
 	obj_dialog_manager.dialog_character_active = false;

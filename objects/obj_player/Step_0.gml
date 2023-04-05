@@ -29,7 +29,7 @@ if(position_meeting(x, y, obj_tall_grass)){
 if(lerp_amt > 0){
 	x = lerp(x,tar_x,lerp_amt);
 	y = lerp(y,tar_y,lerp_amt);
-	if(distance_to_point(tar_x,tar_y) < 0.1){
+	if(distance_to_point(tar_x,tar_y) < 0.05){
 		lerp_amt = 0;
 		idle_min = y - 1;
 		idle_max = y + 1;

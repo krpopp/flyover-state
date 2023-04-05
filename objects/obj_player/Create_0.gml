@@ -16,3 +16,5 @@ idle_max = y + 1;
 idle_tar = idle_min;
 
 input_count = 10;
+
+current_cell = noone;

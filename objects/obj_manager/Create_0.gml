@@ -5,7 +5,6 @@
 //fix way that grass moves
 //collect item
 //open door
-//trigger dialog
 
 grid_made = false;
 
@@ -19,6 +18,8 @@ grid_horizontal_size = 50;
 grid_vertical_size = 50;
 
 cell_offset = font_get_info(fnt_game).size + 3;
+
+fade_in = true;
 
 //grid_horizontal_size = round(room_width/cell_offset)/1.5;
 grid_horizontal_size = round(((room_width - (grid_x_offset + cell_offset))/cell_offset));
@@ -67,7 +68,6 @@ camera_base_height = camera_get_view_height(view_camera[0]);
 camera_current_x = camera_get_view_x(view_camera[0]);
 camera_current_y = camera_get_view_y(view_camera[0]);
 
-
 zooming_in = false;
 zooming_out = false;
 zoom_point = noone;
@@ -77,8 +77,10 @@ grid_y_start = 20;
 
 scr_adj_vis_grid();
 grid_made = true;
-scr_fov(player_start_x, player_start_y);
+//scr_fov(player_start_x, player_start_y);
 //camera_set_view_size(view_camera[0], 683, 384);
 
 dialoge_box = instance_create_layer(room_width/1.6, room_height/1.3, "Instances", obj_dialogue_box);
 instance_deactivate_object(dialoge_box);
+
+alarm[0] = 3 * room_speed;

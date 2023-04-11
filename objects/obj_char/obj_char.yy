@@ -28,7 +28,11 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"dialogue_file","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"test_char.txt\"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"my_portrait","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"spr_new_test","varType":5,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"my_name","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"deb\"","varType":2,},
+  ],
   "solid": false,
   "spriteId": {
     "name": "spr_char_test",

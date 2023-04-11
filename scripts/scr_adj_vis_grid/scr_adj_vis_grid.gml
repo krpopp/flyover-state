@@ -19,7 +19,14 @@ function scr_adj_vis_grid(){
 			if(this_cell.my_bubble != noone){
 				this_cell.my_bubble.my_visibility = false;
 			}
-			this_cell.image_alpha = 0.5;
+			if(!obj_manager.fade_in){
+				this_cell.image_alpha = 0.5;
+			}else{
+				this_cell.tar_alpha = 0.5;
+				this_cell.alpha_lerping = false;
+				this_cell.alarm[0] = random_range(0.5,3) * room_speed;
+				this_cell.alpha_lerp = random_range(0.01, 0.1);
+			}
 		}
 	}
 	ds_grid_clear(obj_manager.grid_visible, 0);

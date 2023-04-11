@@ -70,7 +70,7 @@ function scr_make_cell(grid_x, grid_y){
 	if(new_cell.my_has_dialog){
 		new_cell.my_bubble = scr_speak_bubble(new_cell.x, new_cell.y, "Hey!");
 	}
-	
+	new_cell.image_alpha = 0;
 	new_cell.grid_visible_x = 0;
 	new_cell.grid_visible_y = 0;
 	ds_grid_add(obj_manager.grid_whole, grid_x, grid_y, new_cell);

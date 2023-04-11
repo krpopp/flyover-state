@@ -17,6 +17,8 @@ my_solid = false;
 
 casts_shadows = false;
 
+//my_has_dialog controls whether this has a bubble
+//delete?
 my_has_dialog = false;
 my_bubble = noone;
 
@@ -32,5 +34,5 @@ sub_obj = noone;
 
 alpha_lerp = 0.1;
 alpha_lerping = false;
-alpha = 1;
+alpha = 0;
 tar_alpha = 1;

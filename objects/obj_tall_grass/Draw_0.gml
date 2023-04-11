@@ -22,7 +22,7 @@ if(my_visibility){
 		my_x_2_lerp, y - sprite_height/2, 
 		x + sprite_width/2, y + sprite_height/2, 
 		x - sprite_width/2, y + sprite_height/2, 
-		1);
+		alpha);
 		
 
 	//draw_sprite(sprite_index, 0, x, y);

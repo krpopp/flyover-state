@@ -1,4 +1,4 @@
-if(!obj_dialog_manager.dialog_active && input_count <= 0){
+if(!obj_dialog_manager.dialog_active && input_count <= 0 && !obj_manager.fade_in){
 	if(keyboard_check(vk_down)){
 		scr_player_move_y(1);
 		input_count = 10;

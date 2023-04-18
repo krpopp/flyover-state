@@ -15,6 +15,7 @@ function scr_player_move_x(x_change){
 				old_cell = ds_grid_get(obj_manager.grid_visible, grid_visible_x + -x_change, grid_visible_y);
 			} else{
 				scr_player_collide(new_cell);
+				return;
 			}
 			
 
@@ -32,26 +33,24 @@ function scr_player_move_x(x_change){
 					grid_visible_x += x_change;
 				} else{
 					scr_player_collide(new_cell);
+					return;
 				}
 			}
 		}
 		scr_adj_vis_grid();
+		scr_fov(grid_visible_x, grid_visible_y);
 		if(old_cell != noone){
+			old_cell.player_on = false;
 			old_cell.tar_alpha = 1;
-			old_cell.alpha_lerping = true;
-			old_cell.alpha_lerp = 0.01;
+			new_cell.player_on = true
 			new_cell.tar_alpha = 0;
-			new_cell.alpha_lerping = true;
-			new_cell.alpha_lerp = 0.3
-			//old_cell.my_visibility = true;
-			//new_cell.my_visibility = false;
+		}
+		if(!obj_manager.zooming_in && obj_dialog_manager.dialog_active){
+			obj_manager.zooming_out = true;
+			obj_dialog_manager.dialog_character_active.my_dialog_box.fading_out = true;
+			obj_dialog_manager.dialog_active = false;
+			obj_dialog_manager.dialog_character_active = false;
 		}
 	}
-	scr_fov(grid_visible_x, grid_visible_y);
-	if(!obj_manager.zooming_in && obj_dialog_manager.dialog_active){
-		obj_manager.zooming_out = true;
-		obj_dialog_manager.dialog_character_active.my_dialog_box.fading_out = true;
-		obj_dialog_manager.dialog_active = false;
-		obj_dialog_manager.dialog_character_active = false;
-	}
 }
+	

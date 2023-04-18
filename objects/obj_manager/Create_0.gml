@@ -19,7 +19,7 @@ grid_vertical_size = 50;
 
 cell_offset = font_get_info(fnt_game).size + 3;
 
-fade_in = true;
+fade_in = false;
 
 //grid_horizontal_size = round(room_width/cell_offset)/1.5;
 grid_horizontal_size = round(((room_width - (grid_x_offset + cell_offset))/cell_offset));

@@ -18,3 +18,5 @@ idle_tar = idle_min;
 input_count = 10;
 
 current_cell = noone;
+
+depth = -10

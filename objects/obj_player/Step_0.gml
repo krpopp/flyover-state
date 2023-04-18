@@ -26,10 +26,12 @@ if(position_meeting(x, y, obj_tall_grass)){
 	inst.reset_sprite = 0;
 }
 
+
+
 if(lerp_amt > 0){
 	x = lerp(x,tar_x,lerp_amt);
 	y = lerp(y,tar_y,lerp_amt);
-	if(distance_to_point(tar_x,tar_y) < 0.05){
+	if(x == tar_x && y == tar_y){
 		lerp_amt = 0;
 		idle_min = y - 1;
 		idle_max = y + 1;

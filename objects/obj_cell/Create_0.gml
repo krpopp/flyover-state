@@ -32,7 +32,10 @@ tar_y = 0;
 
 sub_obj = noone;
 
+
 alpha_lerp = 0.1;
 alpha_lerping = false;
 alpha = 0;
 tar_alpha = 1;
+
+player_on = false;

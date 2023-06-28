@@ -9,6 +9,7 @@ if(lerp_amt > 0){
 		//y = tar_y;
 	}
 }
+scr_alpha_lerp();
 /*
 if(alpha_lerping){
 	alpha = lerp(alpha, tar_alpha, alpha_lerp);

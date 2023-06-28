@@ -19,7 +19,7 @@ grid_vertical_size = 50;
 
 cell_offset = font_get_info(fnt_game).size + 3;
 
-fade_in = true;
+//fade_in = true;
 
 //grid_horizontal_size = round(room_width/cell_offset)/1.5;
 grid_horizontal_size = round(((room_width - (grid_x_offset + cell_offset))/cell_offset));
@@ -37,8 +37,8 @@ grid_whole = ds_grid_create(level_width, level_height);
 grid_visible = ds_grid_create(grid_horizontal_size, grid_vertical_size);
 
 
-player_start_x = 16;
-player_start_y = 21;
+player_start_x = 23;
+player_start_y = 25;
 
 inner_boarder = 5;
 
@@ -76,11 +76,13 @@ grid_x_start = 0;
 grid_y_start = 20;
 
 scr_adj_vis_grid();
+
 grid_made = true;
-//scr_fov(player_start_x, player_start_y);
+scr_fov(player_start_x, player_start_y);
 //camera_set_view_size(view_camera[0], 683, 384);
+ds_grid_get(obj_manager.grid_visible, player.grid_visible_x, player.grid_visible_y).my_visibility = false;
 
 dialoge_box = instance_create_layer(room_width/1.6, room_height/1.3, "Instances", obj_dialogue_box);
 instance_deactivate_object(dialoge_box);
 
-alarm[0] = 3 * room_speed;
+//fadfadalarm[0] = 3 * room_speed;

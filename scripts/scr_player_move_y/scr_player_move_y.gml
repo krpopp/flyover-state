@@ -36,7 +36,9 @@ function scr_player_move_y(y_change){
 			}
 		}
 		scr_adj_vis_grid();
+		
 		if(old_cell != noone){
+			/*
 			if(!old_cell.alpha_lerping){
 				old_cell.tar_alpha = 1;
 				old_cell.alpha_lerping = true;
@@ -44,8 +46,9 @@ function scr_player_move_y(y_change){
 			}
 			new_cell.tar_alpha = 0;
 			new_cell.alpha_lerping = true;
-			new_cell.alpha_lerp = 0.3
-			//new_cell.my_visibility = false;
+			new_cell.alpha_lerp = 0.3*/
+			old_cell.my_visibility = true;
+			new_cell.my_visibility = false;
 		}
 		scr_fov(grid_visible_x, grid_visible_y);
 		if(!obj_manager.zooming_in && obj_dialog_manager.dialog_active){

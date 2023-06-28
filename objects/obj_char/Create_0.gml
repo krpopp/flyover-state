@@ -53,3 +53,22 @@ if(variable_struct_exists(my_dialog_json.stage[my_dialog_track], "choices")){
 	my_next_stage[0] = my_dialog_json.stage[my_dialog_track].next_stage[0];
 	my_next_stage[1] = my_dialog_json.stage[my_dialog_track].next_stage[1];
 }
+
+var my_event_file = file_text_open_read(event_file);
+my_events_all = "";
+my_event_tracker = 0;
+my_e_range_x = 0;
+my_e_range_y = 0;
+
+while(!file_text_eof(my_event_file)){
+	my_events_all = my_events_all + file_text_readln(my_event_file);
+}
+
+file_text_close(my_event_file);
+
+my_event_json = json_parse(my_events_all);
+
+if(my_event_json.a_events[my_event_tracker].stage == my_dialog_track){
+	my_e_range_x = my_event_json.a_events[my_event_tracker].range[0];
+	my_e_range_y = my_event_json.a_events[my_event_tracker].range[1];
+}

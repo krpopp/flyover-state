@@ -1,5 +1,8 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"FX","order":18,"path":"folders/Objects/FX.yy",},
+    {"name":"Events","order":1,"path":"folders/Scripts/Events.yy",},
+  ],
   "ResourceOrderSettings": [
     {"name":"scr_adj_vis_grid","order":1,"path":"scripts/scr_adj_vis_grid/scr_adj_vis_grid.yy",},
     {"name":"scr_enter_dialog","order":3,"path":"scripts/scr_enter_dialog/scr_enter_dialog.yy",},
@@ -23,8 +26,9 @@
     {"name":"scr_dialog_choice","order":1,"path":"scripts/scr_dialog_choice/scr_dialog_choice.yy",},
     {"name":"obj_bed","order":5,"path":"objects/obj_bed/obj_bed.yy",},
     {"name":"spr_speak","order":3,"path":"sprites/spr_speak/spr_speak.yy",},
-    {"name":"obj_shadow","order":8,"path":"objects/obj_shadow/obj_shadow.yy",},
+    {"name":"obj_shadow","order":1,"path":"objects/obj_shadow/obj_shadow.yy",},
     {"name":"obj_iron_fence","order":16,"path":"objects/obj_iron_fence/obj_iron_fence.yy",},
+    {"name":"rm_start","order":1,"path":"rooms/rm_start/rm_start.yy",},
     {"name":"spr_e","order":3,"path":"sprites/spr_e/spr_e.yy",},
     {"name":"spr_bed","order":7,"path":"sprites/spr_bed/spr_bed.yy",},
     {"name":"obj_road_dash","order":18,"path":"objects/obj_road_dash/obj_road_dash.yy",},
@@ -39,7 +43,7 @@
     {"name":"spr_tv","order":9,"path":"sprites/spr_tv/spr_tv.yy",},
     {"name":"obj_cell","order":1,"path":"objects/obj_cell/obj_cell.yy",},
     {"name":"obj_bush","order":12,"path":"objects/obj_bush/obj_bush.yy",},
-    {"name":"obj_render_bg","order":11,"path":"objects/obj_render_bg/obj_render_bg.yy",},
+    {"name":"obj_start","order":17,"path":"objects/obj_start/obj_start.yy",},
     {"name":"scr_exit_dialog","order":4,"path":"scripts/scr_exit_dialog/scr_exit_dialog.yy",},
     {"name":"scr_player_collide","order":2,"path":"scripts/scr_player_collide/scr_player_collide.yy",},
     {"name":"spr_c","order":1,"path":"sprites/spr_c/spr_c.yy",},
@@ -70,7 +74,7 @@
     {"name":"spr_flower","order":13,"path":"sprites/spr_flower/spr_flower.yy",},
     {"name":"spr_lightpost","order":11,"path":"sprites/spr_lightpost/spr_lightpost.yy",},
     {"name":"scr_fov","order":3,"path":"scripts/scr_fov/scr_fov.yy",},
-    {"name":"obj_light","order":16,"path":"objects/obj_light/obj_light.yy",},
+    {"name":"obj_light","order":2,"path":"objects/obj_light/obj_light.yy",},
     {"name":"spr_grass","order":3,"path":"sprites/spr_grass/spr_grass.yy",},
     {"name":"spr_f","order":4,"path":"sprites/spr_f/spr_f.yy",},
     {"name":"spr_walls","order":5,"path":"sprites/spr_walls/spr_walls.yy",},

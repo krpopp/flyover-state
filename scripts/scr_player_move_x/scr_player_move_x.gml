@@ -36,15 +36,17 @@ function scr_player_move_x(x_change){
 			}
 		}
 		scr_adj_vis_grid();
+
 		if(old_cell != noone){
+					/*
 			old_cell.tar_alpha = 1;
 			old_cell.alpha_lerping = true;
 			old_cell.alpha_lerp = 0.01;
 			new_cell.tar_alpha = 0;
 			new_cell.alpha_lerping = true;
-			new_cell.alpha_lerp = 0.3
-			//old_cell.my_visibility = true;
-			//new_cell.my_visibility = false;
+			new_cell.alpha_lerp = 0.3*/
+			old_cell.my_visibility = true;
+			new_cell.my_visibility = false;
 		}
 	}
 	scr_fov(grid_visible_x, grid_visible_y);

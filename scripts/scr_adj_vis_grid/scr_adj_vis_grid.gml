@@ -16,17 +16,19 @@ function scr_adj_vis_grid(){
 				this_cell.y = (obj_manager.grid_y_offset + (y_grid * obj_manager.cell_offset)) - (obj_manager.grid_y_start * obj_manager.cell_offset);
 			}
 			this_cell.my_visibility = false;
-			if(this_cell.my_bubble != noone){
-				this_cell.my_bubble.my_visibility = false;
-			}
+			//this_cell.image_alpha = 0.5;
+			/*
 			if(!obj_manager.fade_in){
-				this_cell.image_alpha = 0.5;
+				
 			}else{
-				this_cell.tar_alpha = 0.5;
-				this_cell.alpha_lerping = false;
-				this_cell.alarm[0] = random_range(0.5,3) * room_speed;
-				this_cell.alpha_lerp = random_range(0.01, 0.1);
-			}
+				if(!this_cell.exists){
+					this_cell.tar_alpha = 0.5;
+					this_cell.alpha_lerping = false;
+					this_cell.alarm[0] = random_range(0.5,2) * room_speed;
+					this_cell.alpha_lerp = random_range(0.01, 0.1);
+					this_cell.exists = true;
+				}
+			}*/
 		}
 	}
 	ds_grid_clear(obj_manager.grid_visible, 0);
@@ -54,17 +56,16 @@ function scr_adj_vis_grid(){
 			next_cell.my_visibility = true;
 			next_cell.grid_visible_x = v_x;
 			next_cell.grid_visible_y = v_y;
+		
 			
 			if(next_cell.my_bubble != noone){
-				if(!next_cell.my_bubble.has_seen){
+				if(!next_cell.my_bubble.my_visibility){
+					next_cell.my_bubble.x = next_cell.x;
+					next_cell.my_bubble.y = next_cell.y-20;
 					next_cell.my_bubble.my_visibility = true;
-					next_cell.my_bubble.x = next_cell.tar_x;
-					next_cell.my_bubble.y = next_cell.tar_y - 20;
-					next_cell.my_bubble.has_seen = true;
-				}else{
-					next_cell.my_bubble.my_visibility = true;
+				} else if(next_cell.my_bubble.my_visibility){
 					next_cell.my_bubble.tar_x = next_cell.tar_x;
-					next_cell.my_bubble.tar_y = next_cell.tar_y - 20;
+					next_cell.my_bubble.tar_y = next_cell.tar_y-20;
 					next_cell.my_bubble.lerp_amt = 0.08;
 					//next_cell.my_bubble.alarm[0] = room_speed * 0.05;
 				}

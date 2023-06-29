@@ -39,3 +39,4 @@ alpha = 0;
 tar_alpha = 1;
 
 player_on = false;
+char_on = false;

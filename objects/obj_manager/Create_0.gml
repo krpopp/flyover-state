@@ -84,3 +84,5 @@ dialoge_box = instance_create_layer(room_width/1.6, room_height/1.3, "Instances"
 instance_deactivate_object(dialoge_box);
 
 alarm[0] = 3 * room_speed;
+
+in_event = false;

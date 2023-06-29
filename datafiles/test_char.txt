@@ -7,6 +7,7 @@
                     "yes",
                     "no"
                 ],
+	    "expression": "base",
             "next_stage": 
                 [
                     1,
@@ -15,6 +16,7 @@
         },
         {
             "line": "fantastic!",
+	   "expression": "happy",
             "next_stage": 
                 [
                     3
@@ -22,6 +24,7 @@
         },
         {
             "line": "that's weird",
+	    "expression": "sad",
             "next_stage": 
                 [
                     3

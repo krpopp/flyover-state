@@ -4,7 +4,8 @@ function scr_advance_dialog(character, next_stage){
 	with(character){
 		my_dialog_track = next_stage;
 		my_dialog = my_dialog_json.stage[my_dialog_track].line;
-
+		current_portrait = scr_switch_face(my_dialog_json.stage[my_dialog_track].expression, id);
+		obj_manager.dialoge_box.my_portrait = current_portrait;
 		if(variable_struct_exists(my_dialog_json.stage[my_dialog_track], "choices")){
 			my_choices_exist = true;
 			my_choices[0] = my_dialog_json.stage[my_dialog_track].choices[0];

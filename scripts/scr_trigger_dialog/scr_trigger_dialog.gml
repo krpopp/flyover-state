@@ -15,7 +15,7 @@ function scr_trigger_dialog(hit_character){
 	instance_activate_object(obj_manager.dialoge_box);
 	
 	//display the portrait
-	obj_manager.dialoge_box.my_portrait = hit_character.my_portrait;
+	obj_manager.dialoge_box.my_portrait = hit_character.current_portrait;
 	obj_manager.dialoge_box.t_l = hit_character.t_l;
 	obj_manager.dialoge_box.t_r = hit_character.t_r;
 	obj_manager.dialoge_box.b_r = hit_character.b_r;

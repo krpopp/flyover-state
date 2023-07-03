@@ -24,6 +24,8 @@ my_choices_exist = false;
 my_has_dialog = true;
 my_dialog_box = noone;
 
+can_move = true;
+
 var my_dialog_file = file_text_open_read(dialogue_file);
 
 //load all lines from the dialogue file to one big ol string
@@ -51,7 +53,9 @@ if(variable_struct_exists(my_dialog_json.stage[my_dialog_track], "choices")){
 	my_next_stage[0] = my_dialog_json.stage[my_dialog_track].next_stage[0];
 	my_next_stage[1] = my_dialog_json.stage[my_dialog_track].next_stage[1];
 }
-/*
+
+
+
 var my_event_file = file_text_open_read(event_file);
 my_events_all = "";
 my_event_tracker = 0;
@@ -75,5 +79,5 @@ if(my_event_json.a_events[my_event_tracker].stage == my_dialog_track){
 
 moving = false;
 
-x_path = [];
-y_path = [];
+my_path = path_add();
+path_set_closed(my_path, false);

@@ -14,6 +14,7 @@ my_visibility = false;
 my_color = make_colour_rgb(255, 255, 255);
 
 my_solid = false;
+can_move = false;
 
 casts_shadows = false;
 

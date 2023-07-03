@@ -86,3 +86,5 @@ instance_deactivate_object(dialoge_box);
 alarm[0] = 3 * room_speed;
 
 in_event = false;
+
+mp_manager = instance_create_layer(0, 0, "Instances", obj_motion_manager);

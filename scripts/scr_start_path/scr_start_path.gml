@@ -8,8 +8,23 @@ function scr_start_path(mover, tar_x, tar_y){
 		tar_y, 
 		false)){
 		path_set_closed(mover.my_path, false);
-		path_start(mover.my_path, 2, path_action_stop, false);
+		//path_start(mover.my_path, 2, path_action_stop, false);
+		
+		cell_list = [];
+		
+		for(var i = 0; i < path_get_number(mover.my_path); i++)
+		{
+			var cellX = path_get_point_x(mover.my_path, i) div obj_manager.cell_offset;
+			var cellY = path_get_point_y(mover.my_path, i) div obj_manager.cell_offset;
+			
+			cell_list[i] = (cellY * obj_manager.grid_horizontal_size) + cellX;
+			
+			show_debug_message(cell_list[i] % obj_manager.grid_horizontal_size);
+			show_debug_message(cell_list[i] div obj_manager.grid_horizontal_size);
+		}
+		
 		show_debug_message("found a path");
+		return cell_list;
 	} else {
 		show_debug_message("i can't find a path");
 	}

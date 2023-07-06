@@ -44,7 +44,6 @@
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"graveyard.csv","CopyToMask":-1,"filePath":"datafiles",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"graveyard.csv","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"homearea.csv","CopyToMask":3035461389054378222,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"leveltest3.csv","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"start_game.txt","CopyToMask":-1,"filePath":"datafiles",},
@@ -91,6 +90,7 @@
     {"id":{"name":"obj_bed","path":"objects/obj_bed/obj_bed.yy",},},
     {"id":{"name":"spr_speak","path":"sprites/spr_speak/spr_speak.yy",},},
     {"id":{"name":"obj_shadow","path":"objects/obj_shadow/obj_shadow.yy",},},
+    {"id":{"name":"scr_move_in_path","path":"scripts/scr_move_in_path/scr_move_in_path.yy",},},
     {"id":{"name":"obj_iron_fence","path":"objects/obj_iron_fence/obj_iron_fence.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"spr_e","path":"sprites/spr_e/spr_e.yy",},},

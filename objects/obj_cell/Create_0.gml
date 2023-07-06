@@ -55,5 +55,8 @@ state = C_STATE.idle
 
 
 my_path = noone;
-my_path = noone;
-my_path = noone;
+
+my_sub_cell = noone;
+
+my_current_path = [];
+my_current_path_count = 1;

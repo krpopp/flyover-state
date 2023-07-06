@@ -5,7 +5,19 @@ function scr_make_cell(grid_x, grid_y){
 	//var my_obj_type = scr_cell_type(string(obj_manager.level_whole[# grid_x, grid_y]));
 	//var new_cell = instance_create_layer(0, 0, "Instances", my_obj_type);
 	
-	var new_cell = scr_cell_type(string(obj_manager.level_whole[# grid_x, grid_y]));
+	var this_string = string(obj_manager.level_whole[# grid_x, grid_y]);
+	var sub_cell = noone;
+	
+	if(string_length(this_string) > 1)
+	{
+		var new_cell = scr_cell_type(string_char_at(this_string, 1));
+		sub_cell =  scr_cell_type(string_char_at(this_string, 2));
+	} else
+	{
+		var new_cell = scr_cell_type(this_string);
+	}
+	
+	
 	
 	new_cell.my_letter = string(obj_manager.level_whole[# grid_x, grid_y]);
 	new_cell.my_visibility = false;
@@ -16,8 +28,8 @@ function scr_make_cell(grid_x, grid_y){
 	
 	
 	if(new_cell.object_index == obj_tall_grass){
-		new_cell.my_x_1_lerp = (new_cell.x - new_cell.sprite_width) + random(10);;
-		new_cell.my_x_2_lerp = (new_cell.x + new_cell.sprite_width) + random(10);;
+		new_cell.my_x_1_lerp = (new_cell.x - new_cell.sprite_width) + random(10);
+		new_cell.my_x_2_lerp = (new_cell.x + new_cell.sprite_width) + random(10);
 	}
 	
 	if(new_cell.object_index == obj_wall){
@@ -73,5 +85,28 @@ function scr_make_cell(grid_x, grid_y){
 	new_cell.image_alpha = 0.5;
 	new_cell.grid_visible_x = 0;
 	new_cell.grid_visible_y = 0;
-	ds_grid_add(obj_manager.grid_whole, grid_x, grid_y, new_cell);
+	
+	if(sub_cell != noone)
+	{
+		sub_cell.my_letter = string(obj_manager.level_whole[# grid_x, grid_y]);
+		sub_cell.my_visibility = false;
+	
+		sub_cell.grid_whole_x = grid_x;
+		sub_cell.grid_whole_y = grid_y;
+		if(sub_cell.my_has_dialog){
+			sub_cell.my_bubble = scr_speak_bubble(sub_cell.x, sub_cell.y, "Hey!");
+		}
+		sub_cell.image_alpha = 0.5;
+		sub_cell.grid_visible_x = 0;
+		sub_cell.grid_visible_y = 0;
+		
+		sub_cell.my_sub_cell = new_cell
+		
+		ds_grid_add(obj_manager.grid_whole, grid_x, grid_y, sub_cell);
+	} else
+	{
+		ds_grid_add(obj_manager.grid_whole, grid_x, grid_y, new_cell);
+	}
+	
+	
 }

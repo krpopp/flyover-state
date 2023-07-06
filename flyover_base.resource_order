@@ -32,6 +32,7 @@
     {"name":"obj_bed","order":5,"path":"objects/obj_bed/obj_bed.yy",},
     {"name":"spr_speak","order":3,"path":"sprites/spr_speak/spr_speak.yy",},
     {"name":"obj_shadow","order":1,"path":"objects/obj_shadow/obj_shadow.yy",},
+    {"name":"scr_move_in_path","order":2,"path":"scripts/scr_move_in_path/scr_move_in_path.yy",},
     {"name":"obj_iron_fence","order":16,"path":"objects/obj_iron_fence/obj_iron_fence.yy",},
     {"name":"rm_start","order":1,"path":"rooms/rm_start/rm_start.yy",},
     {"name":"spr_e","order":3,"path":"sprites/spr_e/spr_e.yy",},

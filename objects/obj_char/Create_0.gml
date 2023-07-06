@@ -61,7 +61,6 @@ my_events_all = "";
 my_event_tracker = 0;
 my_e_range_x = 0;
 my_e_range_y = 0;
-my_check_event = false;
 
 while(!file_text_eof(my_event_file)){
 	my_events_all = my_events_all + file_text_readln(my_event_file);

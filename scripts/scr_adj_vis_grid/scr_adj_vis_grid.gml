@@ -11,6 +11,7 @@ function scr_adj_vis_grid(){
 			var next_cell = ds_grid_get(obj_manager.grid_whole, grid_x, grid_y);
 
 			if(obj_manager.grid_made){
+				next_cell.state = C_STATE.grid_lerp;
 				next_cell.tar_x = obj_manager.grid_x_offset + (v_x * obj_manager.cell_offset);
 				next_cell.tar_y = obj_manager.grid_y_offset + (v_y * obj_manager.cell_offset);
 				next_cell.lerp_amt = .08;
@@ -36,6 +37,7 @@ function scr_adj_vis_grid(){
 					next_cell.my_bubble.y = next_cell.tar_y - 20;
 					next_cell.my_bubble.has_seen = true;
 				}else{
+					next_cell.state = C_STATE.grid_lerp;
 					next_cell.my_bubble.tar_x = next_cell.tar_x;
 					next_cell.my_bubble.tar_y = next_cell.tar_y - 20;
 					next_cell.my_bubble.lerp_amt = 0.08;

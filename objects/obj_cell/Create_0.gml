@@ -16,6 +16,8 @@ my_color = make_colour_rgb(255, 255, 255);
 my_solid = false;
 can_move = false;
 
+my_check_event = false;
+
 casts_shadows = false;
 
 //my_has_dialog controls whether this has a bubble
@@ -41,3 +43,17 @@ tar_alpha = 1;
 
 player_on = false;
 char_on = false;
+
+enum C_STATE
+{
+ idle,
+ grid_lerp,
+ move
+}
+
+state = C_STATE.idle
+
+
+my_path = noone;
+my_path = noone;
+my_path = noone;
